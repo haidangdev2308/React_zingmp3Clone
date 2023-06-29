@@ -1,0 +1,1 @@
+export * from './home' //export những hàm được export ở home
