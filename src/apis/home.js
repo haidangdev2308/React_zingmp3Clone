@@ -1,7 +1,7 @@
 import axios from "../axios";
 
 //resolve, reject tương tự như return 
-
+//lấy api của trang home 
 export const getHome = () => new Promise(async(resolve, reject) => {
     try {
         const response = await axios({

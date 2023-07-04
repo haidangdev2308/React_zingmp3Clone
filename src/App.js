@@ -1,13 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { ToastContainer, toast } from 'react-toastify';
 import { Home, Login, Public } from './pages/public/Index'
 import 'react-toastify/dist/ReactToastify.css';
 import { Routes, Route } from "react-router-dom";
 import path from "./ultis/path";
+import * as actions from './store/actions'
 
 function App() {
-  const {homeData} = useSelector(state => state.app) //state đại diện các states của store lưu giữ
+  const dispatch = useDispatch()
+//gửi action gọi api trang home khi render lần đầu
+  useEffect( () => {
+    dispatch(actions.getHome()) //dispatch nhu người đưa thư đến reducer
+  },[])
+
+  
   //store đã được thêm vào từ file index
   return (
     <>
