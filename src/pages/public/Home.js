@@ -6,11 +6,11 @@ import * as apis from '../../apis'
 const Home = () => {
 
   return (
-    <div className='overflow-y-auto '>
-      <div className='h-[70px] px-[59px] flex items-center '>
+    <div className='overflow-x-auto '>
+      <div className='h-[70px] px-[59px] flex items-center'>
         <Header/>
-        <Slider/>
       </div>
+      <Slider/>
     </div>
   )
 }
