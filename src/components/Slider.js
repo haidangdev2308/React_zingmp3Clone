@@ -24,7 +24,7 @@ const Slider = () => {
           (<img
             key={item.encodeId}
             src={item.banner}
-            className='slider-item flex-1 object-contain w-1/3 rounded-lg'
+            className='slider-item flex-1 object-contain w-[32%] rounded-lg'
           />)
         )
       }
